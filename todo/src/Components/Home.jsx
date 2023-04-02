@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import "../Styles/Home.css";
 import Task from "./Task";
+import { useEffect } from "react";
 
 const Home = () => {
   const [tasks, setTasks] = useState(localStorage.getItem("tasks") ? JSON.parse(localStorage.getItem("tasks")) : []);
@@ -17,7 +18,11 @@ const Home = () => {
 
     e.preventDefault();
 
-    setTasks([...tasks,{title, description}])
+    setTasks([...tasks,{title, description}]);
+
+    
+    setTitle("");
+    setDescription("");
   }
  
   const deleteTask = (index) => {
@@ -26,8 +31,19 @@ const Home = () => {
       return i!=index;
     });
 
+
+
     setTasks(filterdArray);
+
   }
+
+  useEffect(() => {
+
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+    
+  }, [tasks]);
+
+
   return (
     <div className="container">
         <form onSubmit={submitForm}>
