@@ -1,0 +1,25 @@
+.taskContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+    border-radius: 10px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 10px;
+    padding: 10px 10px;
+
+}
+
+.taskContainer p{
+    background-color: rgb(49, 49, 49);
+    font-size: 19px;
+}
+.taskContainer div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(49, 49, 49);
+    gap: 5px;
+}
+.taskContainer div>:last-child{
+    color: rgb(165, 165, 165);
+    font-size: 12px;
+}

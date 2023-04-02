@@ -1,0 +1,41 @@
+input{
+    padding: 10px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+
+button{
+    padding: 10px 20px;
+    background-color: rgb(228, 36, 2);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form{
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+}
+
+button:hover{
+    background-color: rgb(184, 28, 1);
+}
+
+
+
+.container{
+    margin: auto;
+    max-width: 450px;
+    padding: 10px;
+    margin-top: 4rem;
+}
+
+.container+Task{
+    backgorund-color: rgb(36, 36, 36)
+}
+
